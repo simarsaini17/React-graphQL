@@ -1,6 +1,7 @@
 import BookList from './components/BookList';
 import AddBook from './components/AddBook';
-import  ApolloClient  from 'apollo-boost';
+import ApolloClient from 'apollo-boost';
+// import { ApolloClient,InMemoryCache } from '@apollo/client';
 import { ApolloProvider } from 'react-apollo';
 import './index.css';
 
@@ -9,14 +10,14 @@ const client=new ApolloClient({
   onError: ({ networkError, graphQLErrors }) => {
     console.log('graphQLErrors', graphQLErrors)
     console.log('networkError', networkError)
-  }
+  },
 })
 
 function App() {
   return (
-      <ApolloProvider client={client}>
-      <div className="App">    
-      <h1>Hello World</h1>
+    <ApolloProvider client={client}> 
+       <h1>Reading Book</h1>
+      <div className="App">         
       <BookList/> 
       <AddBook/>
       </div>

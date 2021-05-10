@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {graphql} from 'react-apollo';
 import {getBooks} from '../queries/queries';
-
+import BookDetails from './BookDetails';
 
 const BookList=(props)=>{
+    const[selectedBook,setBookId]=useState(null);
+
+    console.log(selectedBook);
 
     const displayBooks=()=>{
         var data=props.data;
@@ -14,7 +17,7 @@ const BookList=(props)=>{
         }else{
             return data.books.map((book)=>{
                 return(
-                    <li key={book.id}>{book.name}</li>
+                    <li key={book.id} onClick={()=>{setBookId(book.id)}}>{book.name}</li>
                 )
             });
         }
@@ -24,6 +27,7 @@ const BookList=(props)=>{
             <ul id="book-list">
                 {displayBooks()}
             </ul>
+            <BookDetails bookId={selectedBook}/>
         </div>
     )
 }

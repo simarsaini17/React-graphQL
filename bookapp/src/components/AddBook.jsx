@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import {graphql} from 'react-apollo';
 import {getAuthors,addBookMutation,getBooks} from '../queries/queries';
-import {useQuery,useMutation} from '@apollo/react-hooks';
+import {useQuery,useMutation} from 'react-apollo';
 
 const AddBooks=(props)=>{
     const [form,setformData]=useState({name:"",genre:"",authorId:""}); 
