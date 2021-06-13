@@ -1,7 +1,6 @@
 import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 import ApolloClient from 'apollo-boost';
-// import { ApolloClient,InMemoryCache } from '@apollo/client';
 import { ApolloProvider } from 'react-apollo';
 import './index.css';
 
