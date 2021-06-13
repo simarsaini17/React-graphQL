@@ -8,7 +8,7 @@ const cors=require('cors');
 
 app.use(cors());
 
-mongoose.connect("mongodb+srv://GursimratKaur:9XTEYWvm0Usle0n8@cluster1.t93pi.mongodb.net/graphql-ninja?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://<username>:<password>@cluster1.t93pi.mongodb.net/graphql-ninja?retryWrites=true&w=majority");
 mongoose.connection.once('open',()=>{
   console.log("connected");
 })
