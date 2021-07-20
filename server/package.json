@@ -15,7 +15,6 @@
     "graphql": "^15.4.0",
     "lodash": "^4.17.20",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.11.9",
-    "mongose": "0.0.2-security"
+    "mongoose": "^5.11.9"
   }
 }
